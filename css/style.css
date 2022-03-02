@@ -51,12 +51,6 @@ body {
 #result-found {
   display: none;
 }
-#result-found h1 {
-  font-size: medium;
-}
-#result-text {
-  color: rgb(255, 120, 57);
-}
 /* not found section  */
 #not-found {
   display: none;

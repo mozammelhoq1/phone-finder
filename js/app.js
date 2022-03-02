@@ -36,12 +36,13 @@ const displayResult = data => {
     // search not found check
     if (data.length !== 0) {
         document.getElementById('not-found').style.display = "none";
-        document.getElementById('result-text').innerText =`${data.length}`;
+        
         document.getElementById('result-found').style.display= "block";
         //search result
         const topTwenty = data.filter(result => data.indexOf(result) < 20);
         showDisplay(topTwenty,searchResult);
         document.getElementById('spinner-section').style.display='none';
+        const count = document.getElementById('result-count');count.innerText =`Total Result : "${data.length}" of "${topTwenty.length}"`;
     }
     else {
         document.getElementById('not-found').style.display = "block";
