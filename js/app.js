@@ -1,10 +1,10 @@
-// html section id 
+// show in html 
 const searchResult = document.getElementById('search-result');
 
 const phoneDetails = document.getElementById('phone-details');
 phoneDetails.className ='row align-items-center';
 
-// get data by search
+// data search by id
 const getSearch = () => {
     document.getElementById('fill-error').style.display ='none';
     document.getElementById('result-found').style.display= "none";
@@ -15,7 +15,7 @@ const getSearch = () => {
     //take input value
     const searchInput = document.getElementById('search-input');
     const searchValue = searchInput.value.toLowerCase();
-    // error check
+    // empty field error handle
     if (searchValue === '') {
         searchResult.innerHTML = '';
         document.getElementById('not-found').style.display = "none";
@@ -33,7 +33,7 @@ const getSearch = () => {
 
 // display search result
 const displayResult = data => {
-    // search not found check
+    // not found error handle
     if (data.length !== 0) {
         document.getElementById('not-found').style.display = "none";
         
@@ -51,7 +51,7 @@ const displayResult = data => {
 };
 
 
-// get phone details to api
+// load phone details from api
 const getDetails = id => {
     const url = `https://openapi.programming-hero.com/api/phone/${id}`
 
@@ -65,17 +65,17 @@ const displayDetails = data => {
     phoneDetails.innerHTML = '';
     // title section
     const div = document.createElement('div');
-    div.className = 'details-photo col-sm-6'
+    div.className = 'col-sm-6'
     div.innerHTML = `
         <div class="d-flex justify-content-center"><img class="w-50" src="${data.image}"></div>
-        <h1 class="text-center my-2">${data?.name || 'No Found'}</h1>
-        <h3 class="text-center fs-4 my-2">Band: ${data?.brand || 'No Found'}</h3>
+        <h1 class="text-center my-2">${data?.name || 'Not Found'}</h1>
+        <h3 class="text-center text-primary fs-4 my-2">Brand: ${data?.brand || 'Not Found'}</h3>
     `;
     phoneDetails.appendChild(div);
 
     // details section
     const detailsDiv = document.createElement('div');
-    detailsDiv.className = 'container-fluid details-text col-sm-6 my-3';
+    detailsDiv.className = 'container-fluid col-sm-6 my-3';
     detailsDiv.innerHTML = `
     <div class="row">
         <div class="row">
@@ -83,7 +83,7 @@ const displayDetails = data => {
                 <h4>Release Date:</h4>
             </div>
             <div class="col-sm-8 col-8">
-                 <p>${data?.releaseDate || 'No release Date found'}</p>
+                 <p>${data?.releaseDate || 'Not available'}</p>
             </div>
         </div>
         <div class="row">
@@ -91,7 +91,7 @@ const displayDetails = data => {
                 <h4>Display Size:</h4>
             </div>
             <div class="col-sm-8 col-8">
-                 <p>${data.mainFeatures?.displaySize || 'No found'}</p>
+                 <p>${data.mainFeatures?.displaySize || 'Not available'}</p>
             </div>
         </div>
         <div class="row">
@@ -99,7 +99,7 @@ const displayDetails = data => {
                 <h4>ChipSet:</h4>
             </div>
             <div class="col-sm-8 col-8">
-                 <p>${data.mainFeatures?.chipSet || 'No found'}</p>
+                 <p>${data.mainFeatures?.chipSet || 'Not available'}</p>
             </div>
         </div>
         <div class="row">
@@ -107,7 +107,7 @@ const displayDetails = data => {
                 <h4>Memory:</h4>
             </div>
             <div class="col-sm-8 col-8">
-                 <p>${data.mainFeatures?.memory || 'No found'}</p>
+                 <p>${data.mainFeatures?.memory || 'Not available'}</p>
             </div>
         </div>
         <div class="row">
@@ -115,7 +115,7 @@ const displayDetails = data => {
                 <h4>Sensors:</h4>
             </div>
             <div class="col-sm-8 col-8" id="sensors-div">
-                <p>${data.mainFeatures?.sensors.join(", ") || 'No found'}</p>
+                <p>${data.mainFeatures?.sensors.join(", ") || 'Not availble'}</p>
                  
             </div>
         </div>
@@ -138,7 +138,7 @@ const displayDetails = data => {
                             <h4 class="text-end">${prop}:</h4>
                         </div>
                         <div class="col-sm-8 col-8">
-                             <p>${data?.others[prop] || 'No'}</p>
+                             <p>${data?.others[prop] || 'Not availble'}</p>
                         </div>
                 `;
             othersDiv.appendChild(div);
@@ -159,10 +159,10 @@ const showDisplay =(data , section) =>{
         div.className = 'col';
         div.innerHTML = `
         <div class="card border-0">
-            <img src="${result.image}" class="card-img-top w-50 mx-auto mt-3" alt="${result?.phone_name || 'No Found'}">
+            <img src="${result.image}" class="card-img-top w-50 mx-auto mt-3" alt="${result?.phone_name || 'Not availble'}">
             <div class="card-body text-center">
-                <h5 class="card-title phone-title">${result?.phone_name || 'No Found'}</h5>
-                <p class="card-text mb-2">Band: ${result?.brand ||'No Found'}</p>
+                <h5 class="card-title phone-title">${result?.phone_name || 'Not availble'}</h5>
+                <p class="card-text mb-2">Band: ${result?.brand ||'Not availble'}</p>
                 <button class="btn btn-info details-button" onclick="getDetails('${result.slug}')" data-bs-toggle="modal" data-bs-target="#staticBackdrop">See Details</button>
             </div>
         </div>

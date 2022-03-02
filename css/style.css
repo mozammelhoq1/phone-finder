@@ -85,16 +85,12 @@ body {
   align-items: center;
 }
 .details-photo h1 {
-  color: rgb(255, 105, 36);
+  color: #0d6efd;
 }
 #phone-details h4 {
   text-align: end;
-  font-size: 16px;
-  color: rgb(255, 105, 36);
-}
-
-#phone-details p {
-  font-size: 14px;
+  font-size: 18px;
+  color: #0d6efd;
 }
 
 /* footer  */
