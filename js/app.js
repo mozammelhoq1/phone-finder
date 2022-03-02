@@ -42,7 +42,7 @@ const displayResult = data => {
         const topTwenty = data.filter(result => data.indexOf(result) < 20);
         showDisplay(topTwenty,searchResult);
         document.getElementById('spinner-section').style.display='none';
-        const count = document.getElementById('result-count');count.innerText =`Total Result : "${data.length}" of "${topTwenty.length}"`;
+        const count = document.getElementById('result-count');count.innerText =`Total Result : "${topTwenty.length}" of "${data.length}"`;
     }
     else {
         document.getElementById('not-found').style.display = "block";
@@ -161,9 +161,9 @@ const showDisplay =(data , section) =>{
         <div class="card border-0">
             <img src="${result.image}" class="card-img-top w-50 mx-auto mt-3" alt="${result?.phone_name || 'Not availble'}">
             <div class="card-body text-center">
-                <h5 class="card-title phone-title">${result?.phone_name || 'Not availble'}</h5>
-                <p class="card-text mb-2">Band: ${result?.brand ||'Not availble'}</p>
-                <button class="btn btn-info details-button" onclick="getDetails('${result.slug}')" data-bs-toggle="modal" data-bs-target="#staticBackdrop">See Details</button>
+                <h5 class="card-title text-primary">${result?.phone_name || 'Not availble'}</h5>
+                <p class="card-text mb-2">Brand: ${result?.brand ||'Not availble'}</p>
+                <button class="btn btn-outline-primary" onclick="getDetails('${result.slug}')" data-bs-toggle="modal" data-bs-target="#staticBackdrop">See Details</button>
             </div>
         </div>
          `;

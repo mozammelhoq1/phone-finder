@@ -8,37 +8,21 @@ body {
   font-family: "Poppins", sans-serif;
 }
 
-/* nav bar  */
-.nav-section {
-  background-color: rgba(255, 150, 102, 0.959);
-}
 .nav-text a:hover {
   text-decoration: underline;
   color: white;
 }
-.dropdown-section a:hover {
-  color: rgb(255, 105, 36);
-}
-/* search input section  */
+/* search input  */
 #search-input {
-  border: 1px solid rgb(255, 135, 79);
+  border: 1px solid #0d6efd;
 }
 #search-input:focus {
-  box-shadow: 1px 1px 5px rgb(255, 105, 36);
+  box-shadow: 1px 1px 5px #0d6efd;
 }
-.search-button {
-  background-color: rgb(255, 135, 79);
-  color: white;
-  border: 1px solid rgb(255, 135, 79);
-}
-.search-button:hover {
-  background-color: white;
-  color: rgb(255, 120, 57);
-  border: 1px solid rgb(255, 135, 79);
-}
-/* spinner section  */
+
+/* spinner  */
 #spinner-section {
-  color: rgb(255, 120, 57);
+  color: #0d6efd;
   display: none;
 }
 
@@ -56,34 +40,8 @@ body {
   display: none;
 }
 
-/* search result section */
-.phone-title {
-  color: rgb(255, 105, 36);
-}
-#show-more-display {
-  display: none;
-}
-#show-more-button {
-  display: none;
-}
+/* phone details  */
 
-/* details button  */
-.details-button {
-  background-color: rgb(255, 135, 79);
-  color: white;
-  border: 1px solid rgb(255, 135, 79);
-}
-.details-button:hover {
-  background-color: white;
-  color: rgb(255, 120, 57);
-  border: 1px solid rgb(255, 135, 79);
-}
-
-/* phone details section  */
-.details-photo {
-  margin: 20px auto;
-  align-items: center;
-}
 .details-photo h1 {
   color: #0d6efd;
 }
@@ -96,7 +54,7 @@ body {
 /* footer  */
 .footer-section {
   position: relative;
-  min-height: 70vh;
+  min-height: 80vh;
 }
 
 .footer-text {

@@ -5,10 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Phone Finder</title>
+    <title>Mobile Dokan</title>
     <link rel="shortcut icon" href="img/logo.png" type="image/x-icon">
 
-    <!-- bootstrap css -->
+    <!-- bootstrap link -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
 
@@ -21,18 +21,17 @@
     <!-- font awesome  -->
     <script src="https://kit.fontawesome.com/d902b703f8.js" crossorigin="anonymous"></script>
 
-    <!-- vanila css  -->
+    <!-- css link  -->
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <header class="sticky-lg-top">
+    <header class="sticky-top">
         <!-- navbar  -->
-        <nav class="navbar navbar-expand-lg navbar-dark nav-section">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
             <div class="container">
-                <a class="navbar-brand" href="https://phonefinder-app.netlify.app/">
-                    <!-- <img src="img/logo.png" alt="" width="60" height="60" class="d-inline-block align-text-center"> -->
-                    Phone Finder
+                <a class="navbar-brand" href="#">
+                    Mobile Dokan
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
                     data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false"
@@ -42,16 +41,17 @@
 
             </div>
             <div class="collapse navbar-collapse nav-text" id="navbarNavDropdown">
-                <ul class="navbar-nav">
+                <ul class="navbar-nav me-5">
                     <li class="nav-item">
                         <a class="nav-link text-white" href="#home">Home</a>
                     </li>
-                    <li class="nav-item dropdown ">
-                        <a class="nav-link text-white dropdown-toggle" href="#" id="navbarDropdownMenuLink"
-                            role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Phone List
-                        </a>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#home">About</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#home">Contact</a>
+                    </li>
+                    
                 </ul>
             </div>
         </nav>
@@ -60,7 +60,7 @@
     <main>
         <!-- welcome section  -->
         <section>
-            <h1 id="home" class="text-center my-4 container">Welcome to Phone Finder</h1>
+            <h1 id="home" class="text-center my-4 container">Welcome to Mobile Dokan</h1>
             <div class="container w-50"><img src="images/bg01.png" class="img-fluid" alt=""></div>
         </section>
 
@@ -68,7 +68,7 @@
         <section class="container w-75 mx-auto">
             <div class="input-group mb-3">
                 <input id="search-input" type="text" class="form-control" placeholder="search Phone name, model">
-                <button onclick="getSearch()" class="btn btn-outline-secondary search-button" type="button"><i class="fa-solid fa-magnifying-glass"></i>Search</button>
+                <button onclick="getSearch()" class="btn btn-outline-primary " type="button"><i class="fa-solid fa-magnifying-glass"></i>Search</button>
             </div>
         </section>
 
@@ -120,7 +120,7 @@
     <footer>
         <div class="footer-section">
             <div class="footer-text">
-                <p>Copyright © 2022 Phone Finder<br>All rights reserved</p>
+                <p>Copyright © 2022 Mobile Dokan.com<br>All rights reserved</p>
             </div>
           </div>
     </footer>
