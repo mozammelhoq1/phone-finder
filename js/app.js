@@ -177,5 +177,3 @@ document.onkeydown = function(){
         getSearch();
     }
 };
-
-
